@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--LoginVC-->
@@ -43,7 +44,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwV-wm-OV9" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
-                                <rect key="frame" x="226.5" y="395" width="147" height="42"/>
+                                <rect key="frame" x="227" y="395" width="147" height="42"/>
                                 <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="bB8-Bn-W02"/>
@@ -55,6 +56,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="K0D-Tk-0fU" kind="show" id="RLQ-KD-3DI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-ab-Igx" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
                                 <rect key="frame" x="167" y="320" width="267" height="40"/>
@@ -95,7 +99,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="377"/>
+            <point key="canvasLocation" x="516" y="65"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="il1-M7-Yh2">
+            <objects>
+                <viewController id="K0D-Tk-0fU" customClass="GameVC" customModule="BrainTeaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r8i-6v-eQV"/>
+                        <viewControllerLayoutGuide type="bottom" id="u31-IN-sqU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hyW-g7-ZfD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuA-dm-HmW" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="16" y="506" width="105" height="42"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="RVC-Zy-IAe"/>
+                                    <constraint firstAttribute="width" constant="105" id="TdA-vS-1Hf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="NO"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noPressed:" destination="K0D-Tk-0fU" eventType="touchUpInside" id="2YQ-97-V2u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember this image?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-U0-AaD">
+                                <rect key="frame" x="16" y="63" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="No2-bP-k2v"/>
+                                    <constraint firstAttribute="height" constant="21" id="OpE-Kd-JyT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esn-Ap-ziz" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="199" y="506" width="105" height="42"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="Scv-TV-eQM"/>
+                                    <constraint firstAttribute="height" constant="42" id="d6r-me-c08"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="START"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="yesPressed:" destination="K0D-Tk-0fU" eventType="touchUpInside" id="z7O-dl-P4n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SLF-U0-AaD" firstAttribute="centerX" secondItem="hyW-g7-ZfD" secondAttribute="centerX" id="1Ln-iE-Khu"/>
+                            <constraint firstItem="u31-IN-sqU" firstAttribute="top" secondItem="esn-Ap-ziz" secondAttribute="bottom" constant="20" id="6i7-as-EVt"/>
+                            <constraint firstItem="SuA-dm-HmW" firstAttribute="leading" secondItem="hyW-g7-ZfD" secondAttribute="leadingMargin" id="FuZ-w8-beg"/>
+                            <constraint firstItem="esn-Ap-ziz" firstAttribute="trailing" secondItem="hyW-g7-ZfD" secondAttribute="trailingMargin" id="HTZ-co-kMl"/>
+                            <constraint firstItem="SLF-U0-AaD" firstAttribute="top" secondItem="r8i-6v-eQV" secondAttribute="bottom" constant="43" id="ULJ-bS-60j"/>
+                            <constraint firstItem="u31-IN-sqU" firstAttribute="top" secondItem="SuA-dm-HmW" secondAttribute="bottom" constant="20" id="r5i-fX-gOg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="noBtn" destination="SuA-dm-HmW" id="0he-1D-cAM"/>
+                        <outlet property="titleLbl" destination="SLF-U0-AaD" id="Sca-sT-sy3"/>
+                        <outlet property="yesBtn" destination="esn-Ap-ziz" id="2fI-kC-Jfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27b-kK-WLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="49"/>
         </scene>
     </scenes>
     <resources>

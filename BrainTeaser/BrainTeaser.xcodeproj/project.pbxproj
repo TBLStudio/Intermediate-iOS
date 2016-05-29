@@ -16,6 +16,9 @@
 		B23C35F01CF9945C000A00DF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C35EF1CF9945C000A00DF /* CustomTextField.swift */; };
 		B23C35F21CF997AD000A00DF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C35F11CF997AD000A00DF /* CustomButton.swift */; };
 		B26890801CFAF74F005F27AD /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268907F1CFAF74F005F27AD /* AnimationEngine.swift */; };
+		B26890821CFB0363005F27AD /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26890811CFB0363005F27AD /* GameVC.swift */; };
+		B26890841CFB06E9005F27AD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26890831CFB06E9005F27AD /* Card.swift */; };
+		B26890861CFB1A0C005F27AD /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26890851CFB1A0C005F27AD /* Card.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		B23C35EF1CF9945C000A00DF /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B23C35F11CF997AD000A00DF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B268907F1CFAF74F005F27AD /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		B26890811CFB0363005F27AD /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		B26890831CFB06E9005F27AD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B26890851CFB1A0C005F27AD /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 			children = (
 				B23C35EF1CF9945C000A00DF /* CustomTextField.swift */,
 				B23C35F11CF997AD000A00DF /* CustomButton.swift */,
+				B26890831CFB06E9005F27AD /* Card.swift */,
+				B26890851CFB1A0C005F27AD /* Card.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C35D71CF973A9000A00DF /* LoginVC.swift */,
+				B26890811CFB0363005F27AD /* GameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 				B23C35E01CF973A9000A00DF /* LaunchScreen.storyboard in Resources */,
 				B23C35DD1CF973A9000A00DF /* Assets.xcassets in Resources */,
 				B23C35DB1CF973A9000A00DF /* Main.storyboard in Resources */,
+				B26890861CFB1A0C005F27AD /* Card.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +257,10 @@
 			files = (
 				B23C35F21CF997AD000A00DF /* CustomButton.swift in Sources */,
 				B23C35D81CF973A9000A00DF /* LoginVC.swift in Sources */,
+				B26890841CFB06E9005F27AD /* Card.swift in Sources */,
 				B23C35D61CF973A9000A00DF /* AppDelegate.swift in Sources */,
 				B26890801CFAF74F005F27AD /* AnimationEngine.swift in Sources */,
+				B26890821CFB0363005F27AD /* GameVC.swift in Sources */,
 				B23C35F01CF9945C000A00DF /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
