@@ -15,6 +15,7 @@
 		B23C35E01CF973A9000A00DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C35DE1CF973A9000A00DF /* LaunchScreen.storyboard */; };
 		B23C35F01CF9945C000A00DF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C35EF1CF9945C000A00DF /* CustomTextField.swift */; };
 		B23C35F21CF997AD000A00DF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C35F11CF997AD000A00DF /* CustomButton.swift */; };
+		B26890801CFAF74F005F27AD /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268907F1CFAF74F005F27AD /* AnimationEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B23C35E71CF97F01000A00DF /* BrainTeaser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrainTeaser-Bridging-Header.h"; sourceTree = "<group>"; };
 		B23C35EF1CF9945C000A00DF /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B23C35F11CF997AD000A00DF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B268907F1CFAF74F005F27AD /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		B23C35D41CF973A9000A00DF /* BrainTeaser */ = {
 			isa = PBXGroup;
 			children = (
+				B268907E1CFAF73D005F27AD /* Util */,
 				B23C35EC1CF992F1000A00DF /* Controller */,
 				B23C35EB1CF992EA000A00DF /* View */,
 				B23C35D51CF973A9000A00DF /* AppDelegate.swift */,
@@ -110,6 +113,14 @@
 				B23C35D71CF973A9000A00DF /* LoginVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B268907E1CFAF73D005F27AD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B268907F1CFAF74F005F27AD /* AnimationEngine.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				B23C35F21CF997AD000A00DF /* CustomButton.swift in Sources */,
 				B23C35D81CF973A9000A00DF /* LoginVC.swift in Sources */,
 				B23C35D61CF973A9000A00DF /* AppDelegate.swift in Sources */,
+				B26890801CFAF74F005F27AD /* AnimationEngine.swift in Sources */,
 				B23C35F01CF9945C000A00DF /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
