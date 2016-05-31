@@ -18,5 +18,7 @@ class SettingVC: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
+    @IBAction func erasePressed(sender: AnyObject) {
+    }
 
 }
