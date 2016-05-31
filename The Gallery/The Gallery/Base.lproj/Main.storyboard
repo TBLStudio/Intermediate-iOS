@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -24,8 +24,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1J-Ld-RUU">
+                                <rect key="frame" x="30" y="560" width="53" height="30"/>
+                                <state key="normal" title="Restore"/>
+                                <connections>
+                                    <action selector="restorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QC9-hI-Fqw"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JTC-3q-FyP">
                                 <rect key="frame" x="0.0" y="125" width="600" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="10" id="tkC-h3-AZe">
                                     <size key="itemSize" width="278" height="303"/>
                                     <size key="headerReferenceSize" width="30" height="0.0"/>
@@ -39,9 +47,43 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="278" height="303"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-22-ozR">
+                                                    <rect key="frame" x="8" y="8" width="262" height="237"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-vU-kPc">
+                                                    <rect key="frame" x="111.5" y="250" width="56" height="54.5"/>
+                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-fp-7b1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="278" height="250"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="tWT-22-ozR" secondAttribute="bottom" constant="50" id="3fS-60-ExG"/>
+                                            <constraint firstItem="RBx-vU-kPc" firstAttribute="top" secondItem="1Az-fp-7b1" secondAttribute="bottom" id="HA4-cJ-r2h"/>
+                                            <constraint firstItem="tWT-22-ozR" firstAttribute="leading" secondItem="A0A-e3-cyn" secondAttribute="leadingMargin" id="HSh-Yb-i8F"/>
+                                            <constraint firstItem="RBx-vU-kPc" firstAttribute="top" secondItem="tWT-22-ozR" secondAttribute="bottom" constant="5" id="Mjd-nE-daR"/>
+                                            <constraint firstItem="1Az-fp-7b1" firstAttribute="top" secondItem="A0A-e3-cyn" secondAttribute="top" id="OTs-Yv-Mov"/>
+                                            <constraint firstItem="1Az-fp-7b1" firstAttribute="leading" secondItem="A0A-e3-cyn" secondAttribute="leading" id="VW1-Wg-MIk"/>
+                                            <constraint firstItem="1Az-fp-7b1" firstAttribute="centerX" secondItem="A0A-e3-cyn" secondAttribute="centerX" id="bDW-gd-zXx"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="tWT-22-ozR" secondAttribute="trailing" id="dp7-UG-g66"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Az-fp-7b1" secondAttribute="trailing" id="n3f-jU-fvd"/>
+                                            <constraint firstItem="RBx-vU-kPc" firstAttribute="centerX" secondItem="A0A-e3-cyn" secondAttribute="centerX" id="nfK-K9-B2s"/>
+                                            <constraint firstItem="tWT-22-ozR" firstAttribute="top" secondItem="A0A-e3-cyn" secondAttribute="topMargin" id="vKT-S1-wKn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="tWT-22-ozR" id="b5G-rx-svf"/>
+                                            <outlet property="purchasedLabel" destination="1Az-fp-7b1" id="Mu2-Nh-B8J"/>
+                                            <outlet property="titleLbl" destination="RBx-vU-kPc" id="qik-hR-Pj2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dgQ-6X-6o6">
@@ -53,13 +95,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1J-Ld-RUU">
-                                <rect key="frame" x="30" y="560" width="53" height="30"/>
-                                <state key="normal" title="Restore"/>
-                                <connections>
-                                    <action selector="restorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QC9-hI-Fqw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
