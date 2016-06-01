@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import StoreKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SKProductsRequestDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,12 +25,28 @@ class ViewController: UIViewController {
         
         if gallery.count == 0 {
             createArt("Horse", productIdentifier: "1", imageName: "horse.jpeg", purchased: true)
-            createArt("Bird", productIdentifier: "2", imageName: "bird.jpeg", purchased: false)
-            createArt("Baby", productIdentifier: "3", imageName: "baby.jpeg", purchased: false)
+            createArt("Bird", productIdentifier: "com.tblstudio.thegallery.birdart", imageName: "bird.jpeg", purchased: false)
+            createArt("Baby", productIdentifier: "com.tblstudio.thegallery.babyart", imageName: "baby.jpeg", purchased: false)
             updateGallery()
             self.collectionView.reloadData()
         }
+        
+        requestProducts()
     }
+    
+    func requestProducts() {
+        let ids: Set<String> = ["com.tblstudio.thegallery.birdart", "com.tblstudio.thegallery.babyart"]
+        let productsRequest = SKProductsRequest(productIdentifiers: ids)
+        productsRequest.delegate = self
+        productsRequest.start()
+        
+    }
+    
+    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+        print("Product Ready: \(response.products.count)")
+        print("Product Not Ready: \(response.invalidProductIdentifiers.count)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -63,7 +80,7 @@ extension ViewController: UICollectionViewDataSource {
             cell.purchasedLabel.hidden = true
         } else {
             cell.purchasedLabel.hidden = false
-            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
             let blurView = UIVisualEffectView(effect: blurEffect)
             cell.layoutIfNeeded()
             blurView.frame = cell.imageView.bounds
@@ -111,8 +128,6 @@ extension ViewController {
 
     }
 }
-
-
 
 
 
