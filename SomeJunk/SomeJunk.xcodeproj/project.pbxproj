@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B28414721D009C0700187C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28414711D009C0700187C19 /* AppDelegate.swift */; };
-		B28414741D009C0700187C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28414731D009C0700187C19 /* ViewController.swift */; };
+		B28414741D009C0700187C19 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28414731D009C0700187C19 /* MainVC.swift */; };
 		B28414771D009C0700187C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28414751D009C0700187C19 /* Main.storyboard */; };
 		B284147A1D009C0700187C19 /* SomeJunk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28414781D009C0700187C19 /* SomeJunk.xcdatamodeld */; };
 		B284147C1D009C0700187C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B284147B1D009C0700187C19 /* Assets.xcassets */; };
@@ -21,12 +21,14 @@
 		B28414931D00A07900187C19 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284148B1D00A07900187C19 /* Item.swift */; };
 		B28414941D00A07900187C19 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284148C1D00A07900187C19 /* ItemType+CoreDataProperties.swift */; };
 		B28414951D00A07900187C19 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284148D1D00A07900187C19 /* ItemType.swift */; };
+		B284149B1D00A7D100187C19 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284149A1D00A7D100187C19 /* MaterialView.swift */; };
+		B284149D1D00AA2F00187C19 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284149C1D00AA2F00187C19 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B284146E1D009C0700187C19 /* SomeJunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeJunk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28414711D009C0700187C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B28414731D009C0700187C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B28414731D009C0700187C19 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B28414761D009C0700187C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28414791D009C0700187C19 /* SomeJunk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SomeJunk.xcdatamodel; sourceTree = "<group>"; };
 		B284147B1D009C0700187C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		B284148B1D00A07900187C19 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		B284148C1D00A07900187C19 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ItemType+CoreDataProperties.swift"; path = "../ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B284148D1D00A07900187C19 /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemType.swift; path = ../ItemType.swift; sourceTree = "<group>"; };
+		B284149A1D00A7D100187C19 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		B284149C1D00AA2F00187C19 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +76,11 @@
 		B28414701D009C0700187C19 /* SomeJunk */ = {
 			isa = PBXGroup;
 			children = (
+				B28414991D00A7AD00187C19 /* View */,
 				B28414971D00A09C00187C19 /* Model */,
 				B28414961D00A08000187C19 /* Generated */,
+				B28414981D00A37800187C19 /* Controller */,
 				B28414711D009C0700187C19 /* AppDelegate.swift */,
-				B28414731D009C0700187C19 /* ViewController.swift */,
 				B28414751D009C0700187C19 /* Main.storyboard */,
 				B284147B1D009C0700187C19 /* Assets.xcassets */,
 				B284147D1D009C0800187C19 /* LaunchScreen.storyboard */,
@@ -105,6 +110,23 @@
 				B284148D1D00A07900187C19 /* ItemType.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B28414981D00A37800187C19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B28414731D009C0700187C19 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B28414991D00A7AD00187C19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B284149A1D00A7D100187C19 /* MaterialView.swift */,
+				B284149C1D00AA2F00187C19 /* ItemCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +203,10 @@
 				B28414911D00A07900187C19 /* Image.swift in Sources */,
 				B28414931D00A07900187C19 /* Item.swift in Sources */,
 				B284148F1D00A07900187C19 /* Store.swift in Sources */,
+				B284149B1D00A7D100187C19 /* MaterialView.swift in Sources */,
 				B28414921D00A07900187C19 /* Item+CoreDataProperties.swift in Sources */,
-				B28414741D009C0700187C19 /* ViewController.swift in Sources */,
+				B284149D1D00AA2F00187C19 /* ItemCell.swift in Sources */,
+				B28414741D009C0700187C19 /* MainVC.swift in Sources */,
 				B284148E1D00A07900187C19 /* Store+CoreDataProperties.swift in Sources */,
 				B28414951D00A07900187C19 /* ItemType.swift in Sources */,
 				B28414941D00A07900187C19 /* ItemType+CoreDataProperties.swift in Sources */,
